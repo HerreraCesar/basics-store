@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -9,14 +9,11 @@
   display: flex;
   flex-flow: row nowrap;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 4rem;
   justify-content: space-between;
-  align-items: center
-}
-
-.links {
-  margin-right: 2rem;
+  align-items: center;
+  background-color: white
 }
 
 .links a {
@@ -30,19 +27,32 @@
 }
 
 .logo {
+  width: 15rem;
   margin-left: 2rem;
   font-weight: 600;
   color: grey;
 }
 
-.container {
+.cart {
+  width: 15rem;
+  margin-right: 2rem;
+  text-align: end;
+}
+
+.cart i {
+  font-size: 1.4rem;
+  color: grey;
+  cursor: pointer;
+}
+
+.sections {
   display: flex;
   flex-flow: column nowrap;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 140rem;
 }
 
-.title {
+.section {
   margin: auto;
+  font-size: 3rem;
 }
-

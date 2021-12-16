@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <div>
       <NavBar/>
-      <div className='container'>
-        <h1 className='title'>E-commerce HERRERA</h1>
+      <div className='sections'>
+        <ItemListContainer id='1'/>
+        <ItemListContainer id='2'/>
+        <ItemListContainer id='3'/>
       </div>
     </div>
   )
