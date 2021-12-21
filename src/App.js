@@ -9,8 +9,6 @@ function App() {
       <NavBar/>
       <div className='sections'>
         <ItemListContainer id='1'/>
-        <ItemListContainer id='2'/>
-        <ItemListContainer id='3'/>
       </div>
     </div>
   )
