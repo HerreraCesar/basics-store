@@ -1,0 +1,38 @@
+[
+    {
+        "id":"1",
+        "name": "Aperitivo Fernet Branca 750 ml",
+        "price": 800,
+        "stock": 3
+    },
+    {
+        "id":"2",
+        "name": "Gaseosa Coca Cola 1.5 lts",
+        "price": 200,
+        "stock": 20
+    },
+    {
+        "id":"3",
+        "name": "Vino Portillo Malbel 750 ml",
+        "price": 450,
+        "stock": 6
+    },
+    {
+        "id":"4",
+        "name": "Alcohol de quemar Porta 1 lt",
+        "price": 200,
+        "stock": 8
+    },
+    {
+        "id":"5",
+        "name": "Tomate triturado Delicias Riojanas",
+        "price": 150,
+        "stock": 10
+    },
+    {
+        "id":"6",
+        "name": "Aceite de girasol Natura 900 ml",
+        "price": 230,
+        "stock": 12
+    }
+]

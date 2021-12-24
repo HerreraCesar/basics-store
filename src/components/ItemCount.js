@@ -23,7 +23,7 @@ const ItemCount = ({stock}) => {
     }
     return (
         <div className='amount'>
-            <p className='stock'>Stock: {stock-quantity}</p>
+            <p className='stock'>Stock: {stock}</p>
             <div className='controls'>
                 <button onClick={modifyAmount} id='decrease'>-</button>
                 <span>{quantity}</span>

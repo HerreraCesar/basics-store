@@ -8,10 +8,10 @@ const NavBar = () => {
                 <span>E-COMMERCE HERRERA</span>
             </div>
             <div className='links'>
-                <a href='#'>Inicio</a>
-                <a href='#'>Productos</a>
-                <a href='#'>Contacto</a>
-                <a href='#'>Mi cuenta</a>
+                <a href='index.html'>Inicio</a>
+                <a href='index.html'>Productos</a>
+                <a href='index.html'>Contacto</a>
+                <a href='index.html'>Mi cuenta</a>
             </div>
             <CartWidget/>
         </div>
