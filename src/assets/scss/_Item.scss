@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixins";
+
+.photo {
+    width: 100%;
+    border-top-right-radius: $curve;
+    border-top-left-radius: $curve;
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1.4rem;
+    background-color: $lightVariant;
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1rem 1.4rem;
+    display: block;
+    background-color: $lightVariant;
+    border-bottom-right-radius: $curve;
+    border-bottom-left-radius: $curve;
+}
+
+.product {
+    background-color: $lightVariant;
+    border-radius: $curve;
+}
+
+a {
+    color: $darkVariant;
+}

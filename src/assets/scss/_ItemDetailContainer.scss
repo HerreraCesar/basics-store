@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+.detailContainer {
+    width: 80%;
+    height: 30rem;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: relative;
+}
+
+.detailContainer img{
+    width: 20rem;
+    height: 30rem;
+    border-radius: $curve;
+}
+
+.detailContainer .name{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: transparent;
+}
+
+.detailContainer .price{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.detailContainer .amount{
+    background-color: transparent;
+}

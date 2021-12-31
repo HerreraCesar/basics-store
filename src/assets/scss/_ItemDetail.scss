@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+
+.data {
+    width: 30rem;
+    height: 30rem;
+    border-radius: $curve;
+    background-color: $lightVariant;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin-left: 2rem;
+}
+
+.code {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.5rem 2rem;
+    font-style: italic;
+    margin-top: 2rem;
+}

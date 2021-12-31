@@ -1,32 +1,41 @@
 import React from 'react'
 import ItemDetail from './ItemDetail'
 import data from '../assets/json/products.json'
-
+import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import Loader from './Loader'
 
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([])
-
-    const getProduct = () => {
-        const promise = new Promise ( (resolved, rejected) => {
-            setTimeout(() => {
-                resolved(data[0])
-                rejected('La obtención de datos falló.')
-            }, 2000);
-        })
-        promise
-            .then(resolved => setProduct(resolved))
-            .catch(rejected => alert(rejected))
-    }
+    const {productId} = useParams();
+    const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
-        getProduct()
-    }, [])
+        setLoading (true);
+        const promise = new Promise ( (resolved, rejected) => {
+            setTimeout(() => {
+                setLoading(false)
+                resolved(data)
+                rejected('La obtención de datos falló.')
+            }, 500);
+        })
+        promise
+            .then(resolved => {
+                if (productId !== undefined) {
+                    const filteredProduct = resolved.find( (product) => product.id === productId)
+                    setProduct(filteredProduct)
+                }
+                else {
+                    setProduct(resolved)
+                }
+            })
+            .catch(rejected => alert(rejected))
+    }, [productId])
 
     return (
         <div className='detailContainer'>
-            <ItemDetail product={product}/>
+            {isLoading ? <Loader/> : <ItemDetail product={product}/>}
         </div>
     )
 }

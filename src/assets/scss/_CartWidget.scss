@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+
+.cart {
+    margin-right: 2rem;
+    margin-left: 10rem;
+    text-align: end;
+    transition: 0.5s;
+    border-radius: 30%;
+}
+
+.cart i {
+    font-size: 1.4rem;
+    color: $darkVariant;
+    cursor: pointer;
+}
+
+.cart:hover {
+    padding: 0.5rem;
+    border: 2px solid $darkVariant;
+}

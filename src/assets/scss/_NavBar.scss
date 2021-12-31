@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+.NavBar {
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light;
+    top: 0;
+    z-index: 2;
+}
+
+.links a {
+    text-decoration: none;
+    color: $darkVariant;
+    margin: 0 1rem;
+}
+
+.links a:hover {
+    color: $focus;
+}
+
+.logo a{
+    font-size: 1.2rem;
+    width: 15rem;
+    margin-left: 2rem;
+    font-weight: 700;
+    color: $darkVariant;
+}
+
+.links .active {
+    color: $focus;
+}
