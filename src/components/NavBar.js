@@ -41,7 +41,7 @@ const NavBar = () => {
                 <NavLink to="products">Todos</NavLink>
                 {categories.map( category => <NavLink to={`products/${category.toLowerCase()}`}>{category}</NavLink> )}
             </div>
-            <CartWidget/>
+            <Link to="cart"><CartWidget/></Link>
         </div>
     )
 }
