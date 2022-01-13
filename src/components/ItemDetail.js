@@ -1,14 +1,23 @@
 import React from 'react'
 import ItemCount from './ItemCount'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 
 const ItemDetail = ({product}) => {
     const [added, setAdded] = useState (false)
 
-    function onAdd() {
+    const {addToCart, productIsInCart} = useContext(CartContext)
+
+    function onAdd(props) {
+        product.quantity = props.target.value;
+        if (productIsInCart(product) === true) {
+            console.log('El producto ya se encuentra en el carrito');
+        }
+        else {
+            addToCart(product)
+        }
         setAdded(true)
-        console.log(added);
     }
     return (
         <>
@@ -17,7 +26,7 @@ const ItemDetail = ({product}) => {
                 <p className='code'>{product.sku}</p>
                 <h2 className='name'>{product.name}</h2>
                 <span className='price'>$ {product.price}</span>
-                {added == false ?
+                {added === false ?
                 <ItemCount onAdd={onAdd} stock={product.stock}/>
                 :<div className='buttonsContainer'>
                     <Link to="/cart"><button className='button'>Ir al carrito</button></Link>

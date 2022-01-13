@@ -39,7 +39,7 @@ const NavBar = () => {
             </div>
             <div className='links'>
                 <NavLink to="products">Todos</NavLink>
-                {categories.map( category => <NavLink to={`products/${category.toLowerCase()}`}>{category}</NavLink> )}
+                {categories.map( category => <NavLink to={`products/${category.toLowerCase()}`} key={category}>{category}</NavLink> )}
             </div>
             <Link to="cart"><CartWidget/></Link>
         </div>

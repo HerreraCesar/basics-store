@@ -2,7 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 
 const ItemCount = ({stock,onAdd}) => {
+
     const [quantity, setQuantity] = useState(1);
+
     function modifyAmount(e) {
         if (e.target.id === 'increase') {
             setQuantity(quantity+1)
@@ -20,7 +22,7 @@ const ItemCount = ({stock,onAdd}) => {
                 <span>{quantity}</span>
                 {quantity >= stock ? "" : <button onClick={modifyAmount} id='increase'>+</button>}
             </div>
-            <button className='addCart' onClick={onAdd}>Agregar al carrito</button>
+            <button className='addCart' value={quantity} onClick={onAdd}>Agregar al carrito</button>
         </div>
     )
 }
