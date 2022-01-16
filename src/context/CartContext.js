@@ -28,13 +28,27 @@ export function CartContextProvider({children}) {
         setCart([])
     }
 
+    function moreQuantity(product) {
+        const position = cart.findIndex(p => p.id === product.id)
+        cart[position].quantity = parseInt(cart[position].quantity) + 1
+        setCart(cart.concat([]))
+    }
+
+    function lessQuantity(product) {
+        const position = cart.findIndex(p => p.id === product.id)
+        cart[position].quantity = parseInt(cart[position].quantity) - 1
+        setCart(cart.concat([]))
+    }
+
     const context = {
         cart: cart,
         total: cart.length,
         addToCart: addToCart,
         removeFromCart: removeFromCart,
         productIsInCart: productIsInCart,
-        clearCart: clearCart
+        clearCart: clearCart,
+        moreQuantity:moreQuantity,
+        lessQuantity:lessQuantity
     }
 
     return (

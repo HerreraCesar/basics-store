@@ -1,4 +1,3 @@
-
 import './assets/scss/styles.scss'
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -7,11 +6,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './components/Home';
 import Cart from './components/Cart';
 import { CartContextProvider } from './context/CartContext';
+import Checkout from './components/Checkout';
 
 
 
 function App() {
-
   return (
     <CartContextProvider>
       <Router>
@@ -22,9 +21,7 @@ function App() {
           <Route path="products" element={<ItemListContainer />} />
           <Route path="products/:categoryId" element={<ItemListContainer />} />
           <Route path="products/details/:productId" element={<ItemDetailContainer />} />
-          <Route path="products/almacen/details/:productId" element={<ItemDetailContainer />} />
-          <Route path="products/limpieza/details/:productId" element={<ItemDetailContainer />} />
-          <Route path="products/bebidas/details/:productId" element={<ItemDetailContainer />} />
+          <Route path="checkout" element={<Checkout/>} />
         </Routes>
       </Router>
     </CartContextProvider>

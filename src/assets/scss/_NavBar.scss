@@ -21,7 +21,7 @@
 }
 
 .links a:hover {
-    color: $focus;
+    color: $focusVariant;
 }
 
 .logo a{
@@ -30,6 +30,10 @@
     margin-left: 2rem;
     font-weight: 700;
     color: $darkVariant;
+}
+
+.logo:hover a{
+    color: $focusVariant;
 }
 
 .links .active {

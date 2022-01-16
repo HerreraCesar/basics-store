@@ -10,7 +10,7 @@ const ItemDetail = ({product}) => {
     const {addToCart, productIsInCart} = useContext(CartContext)
 
     function onAdd(props) {
-        product.quantity = props.target.value;
+        product.quantity = parseInt(props.target.value);
         if (productIsInCart(product) === true) {
             console.log('El producto ya se encuentra en el carrito');
         }
@@ -20,20 +20,25 @@ const ItemDetail = ({product}) => {
         setAdded(true)
     }
     return (
-        <>
+        <div className='detail'>
             <img className='photo' src={product.photo} alt={product.name}/>
             <div className='data'>
-                <p className='code'>{product.sku}</p>
-                <h2 className='name'>{product.name}</h2>
-                <span className='price'>$ {product.price}</span>
-                {added === false ?
-                <ItemCount onAdd={onAdd} stock={product.stock}/>
-                :<div className='buttonsContainer'>
+                <div>
+                    <p className='code'>{product.sku}</p>
+                    <h2 className='name'>{product.name}</h2>
+                    <span className='price'>$ {product.price}</span>
+                </div>
+                {added === true || productIsInCart(product) === true
+                ?
+                <div className='buttonsContainer'>
                     <Link to="/cart"><button className='button'>Ir al carrito</button></Link>
                     <Link to="/products"><button className='button'>Volver</button></Link>
-                </div>}
+                </div>
+                :
+                <ItemCount onAdd={onAdd} stock={product.stock}/>
+                }
             </div>
-        </>
+        </div>
     )
 }
 

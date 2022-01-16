@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-.cart {
+.cartWidget {
     margin-right: 2rem;
     margin-left: 10rem;
     text-align: end;
@@ -9,13 +9,18 @@
     border-radius: 30%;
 }
 
-.cart i {
+.cartWidget i {
     font-size: 1.4rem;
     color: $darkVariant;
     cursor: pointer;
 }
 
-.cart:hover {
-    padding: 0.5rem;
-    border: 2px solid $darkVariant;
+.cartWidget:hover i{
+    color: $focusVariant;
+}
+
+.cartWidget span {
+margin-right: 0.5rem;
+font-weight: 600;
+font-size: 1.1rem;
 }
