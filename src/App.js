@@ -7,14 +7,23 @@ import Home from './components/Home';
 import Cart from './components/Cart';
 import { CartContextProvider } from './context/CartContext';
 import Checkout from './components/Checkout';
-
-
+import db from './services/firebase';
+import data from './assets/json/products.json';
+import {addDoc, collection} from 'firebase/firestore';
 
 function App() {
+
+  /* const arrayUpload = () => {
+    data.forEach(element => {
+      addDoc(collection(db, 'products'), element )
+    });
+  } */
+
   return (
     <CartContextProvider>
       <Router>
         <NavBar/>
+        {/* <button className='subir' onClick={arrayUpload}>subir cosas</button> */}
         <Routes>
           <Route path="" element={<Home/>}/>
           <Route path="cart" element={<Cart/>}/>
