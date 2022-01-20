@@ -4,7 +4,7 @@ import ItemList from './ItemList'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Loader from './Loader'
-import {getDocs, collection, query, where} from 'firebase/firestore';
+import {getDocs, collection, query, where, orderBy} from 'firebase/firestore';
 import db from '../services/firebase';
 
 
@@ -37,9 +37,9 @@ const ItemListContainer = () => {
         // const myProducts = await promise
         console.log(categoryId);
         const myProducts = categoryId ?
-        query(collection(db,'products'), where('category', '==', categoryId))
+        query(collection(db,'products'), where('category', '==', categoryId), orderBy('price'))
         :
-        collection(db,'products');
+        query(collection(db,'products'), orderBy('price'));
 
         const querySnapshot = await getDocs(myProducts)
         console.log(querySnapshot.docs)

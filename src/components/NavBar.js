@@ -1,11 +1,12 @@
 import React from 'react'
 import CartWidget from './CartWidget'
-import data from '../assets/json/products.json'
+/* import data from '../assets/json/products.json' */
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     const [categories, setCategories] = useState([])
+    const data = ['Almacen', 'Bebidas', 'Limpieza']
 
     const getCategories = () => {
         const promise = new Promise ( (resolved, rejected) => {
@@ -16,14 +17,14 @@ const NavBar = () => {
         })
         promise
             .then(resolved => {
-                const filteredCategories = []
+                /* const filteredCategories = []
                 resolved.forEach(product => {
                     if (!filteredCategories.includes(product.category)) {
                         filteredCategories.push(product.category)
                     }
                 });
-                filteredCategories.sort()
-                setCategories(filteredCategories)
+                filteredCategories.sort() */
+                setCategories(resolved)
             })
             .catch(rejected => alert(rejected))
     }

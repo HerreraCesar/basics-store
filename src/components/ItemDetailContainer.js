@@ -1,9 +1,11 @@
 import React from 'react'
 import ItemDetail from './ItemDetail'
-import data from '../assets/json/products.json'
+/* import data from '../assets/json/products.json' */
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Loader from './Loader'
+import db from '../services/firebase'
+import { doc, getDoc, QuerySnapshot } from 'firebase/firestore'
 
 
 const ItemDetailContainer = () => {
@@ -13,7 +15,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading (true);
-        const promise = new Promise ( (resolved, rejected) => {
+        /* const promise = new Promise ( (resolved, rejected) => {
             setTimeout(() => {
                 setLoading(false)
                 resolved(data)
@@ -30,7 +32,15 @@ const ItemDetailContainer = () => {
                     setProduct(resolved)
                 }
             })
-            .catch(rejected => alert(rejected))
+            .catch(rejected => alert(rejected)) */
+
+        const reference = doc(db, 'products', productId)
+
+        getDoc(reference).then( querySnapshot => {
+            setProduct({...querySnapshot.data(), id: querySnapshot.id})
+        } )
+
+        setLoading (false);
     }, [productId])
 
     return (

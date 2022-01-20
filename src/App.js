@@ -8,7 +8,7 @@ import Cart from './components/Cart';
 import { CartContextProvider } from './context/CartContext';
 import Checkout from './components/Checkout';
 import db from './services/firebase';
-import data from './assets/json/products.json';
+/* import data from './assets/json/products.json'; */
 import {addDoc, collection} from 'firebase/firestore';
 
 function App() {
