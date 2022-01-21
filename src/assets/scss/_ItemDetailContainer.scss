@@ -10,14 +10,19 @@
     /* padding: 8rem 0rem; */
     /* margin: auto; */
     /* position: relative; */
-    
+    overflow: hidden;
 }
 
 .detailContainer img{
-    width: 20rem;
+    width: 30rem;
     height: 30rem;
     border-radius: $curve;
+    overflow: hidden;
 }
+
+/* .detailContainer img:hover{
+    transform: scale(1.2);
+} */
 
 .detailContainer .name{
     padding-left: 2rem;

@@ -1,6 +1,5 @@
 import React from 'react'
 import CartWidget from './CartWidget'
-/* import data from '../assets/json/products.json' */
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 

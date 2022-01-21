@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Message = ({message, opacity}) => {
-    /* const [active, setActive] = useState(active) */
+const Message = ({message}) => {
     return (
         <div className="message">
             <i className="fas fa-check"></i>
