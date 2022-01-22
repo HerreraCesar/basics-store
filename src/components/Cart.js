@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
-import Message from './Message'
 
 
 const Cart = () => {
@@ -21,7 +20,7 @@ const Cart = () => {
             <div className='cart'>
                 <h1>Su carrito está vacío.</h1>
                 <h3>Agregue algunos productos haciendo click 
-                    <Link to="/products"><span> aquí</span></Link>
+                    <Link to="/"><span> aquí</span></Link>
                 </h3>
             </div>
             :
@@ -35,25 +34,25 @@ const Cart = () => {
                         </Link>
                         {product.quantity <= 1 
                         ?
-                        <button newMessage='La cantidad no puede ser inferior a uno' onClick={(event) => {
-                            changeMessage(event.target.attributes.newMessage.value)
+                        <button newmessage='La cantidad no puede ser inferior a uno' onClick={(event) => {
+                            changeMessage(event.target.attributes.newmessage.value)
                         }}>-</button>
                         :
                         <button onClick={() => lessQuantity(product)} id={product.id} className='less'>-</button>}
                         <span className='subQuantity'>{product.quantity}</span>
                         {product.quantity >= product.stock
                         ?
-                        <button newMessage='La cantidad no puede superar el stock disponible' onClick={(event) => {
-                            changeMessage(event.target.attributes.newMessage.value)
+                        <button newmessage='La cantidad no puede superar el stock disponible' onClick={(event) => {
+                            changeMessage(event.target.attributes.newmessage.value)
                         }}>+</button> 
                         :
                         <button onClick={() => moreQuantity(product)} id={product.id} className='more'>+</button>}
                         <h2 className='subTotal'>$ {product.price*product.quantity}</h2>
-                        <i newMessage='Producto eliminado correctamente'
+                        <i newmessage='Producto eliminado correctamente'
                            className="fas fa-trash-alt delete" 
                            onClick={(event) => {
                                 removeFromCart(product)
-                                changeMessage(event.target.attributes.newMessage.value)
+                                changeMessage(event.target.attributes.newmessage.value)
                             }}>
                         </i>
                     </div>
@@ -65,11 +64,11 @@ const Cart = () => {
                         <h1>$ {total}</h1>
                     </div>
                     <div className='order'>
-                        <button newMessage='Carrito vaciado correctamente'
+                        <button newmessage='Carrito vaciado correctamente'
                                 className='button' 
                                 onClick={(event) => {
                                     clearCart()
-                                    changeMessage(event.target.attributes.newMessage.value)
+                                    changeMessage(event.target.attributes.newmessage.value)
                                 }}
                         >Vaciar carrito</button>
                         <button className='button'>

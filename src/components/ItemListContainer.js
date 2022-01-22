@@ -8,16 +8,18 @@ import Loader from './Loader'
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [isLoading, setLoading] = useState(true);
-    const {categoryId} = useParams();
+    const {categoryId, } = useParams();
     
     useEffect( () => {
 
-        const myProducts = categoryId ?
-        query(collection(db,'products'), where('category', '==', categoryId), orderBy('price'))
-        :
-        query(collection(db,'products'), orderBy('price'));
+        console.log(query(collection(db,'products'), where('offer', '==', true), orderBy('price')));
 
-        getDocs(myProducts)
+        const myProducts = categoryId == 'offers' ?
+        query(collection(db,'products'), where('offer', '==', true), orderBy('price'))
+        :
+        query(collection(db,'products'), where('category', '==', categoryId), orderBy('price'))
+
+         getDocs(myProducts)
         .then( querySnapshot => {
             setProducts( querySnapshot.docs.map ( e => {
                 return {...e.data(), id: e.id}

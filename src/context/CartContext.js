@@ -45,7 +45,6 @@ export function CartContextProvider({children}) {
     }
 
     function changeMessage(newMessage) {
-        console.log(newMessage);
         setMessage(newMessage)
         setActive(true)
         setTimeout(() => {

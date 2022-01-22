@@ -21,22 +21,22 @@ const ItemCount = ({stock, onAdd}) => {
                 <div className='controls'>
                     {quantity <= 1 
                     ?
-                    <button newMessage='La cantidad no puede ser inferior a uno' onClick={(event) => {
-                        changeMessage(event.target.attributes.newMessage.value)
+                    <button newmessage='La cantidad no puede ser inferior a uno' onClick={(event) => {
+                        changeMessage(event.target.attributes.newmessage.value)
                     }}>-</button>
                     :
                     <button onClick={modifyAmount} id='decrease'>-</button>}
                     <span>{quantity}</span>
                     {quantity >= stock ?
-                    <button newMessage='La cantidad no puede superar el stock disponible' onClick={(event) => {
-                        changeMessage(event.target.attributes.newMessage.value)
+                    <button newmessage='La cantidad no puede superar el stock disponible' onClick={(event) => {
+                        changeMessage(event.target.attributes.newmessage.value)
                     }}>+</button>
                     :
                     <button onClick={modifyAmount} id='increase'>+</button>}
                 </div>
-                <button className='addCart' newMessage='Producto agregado correctamente' value={quantity} onClick={ (event) => {
+                <button className='addCart' newmessage='Producto agregado correctamente' value={quantity} onClick={ (event) => {
                     onAdd(event)
-                    changeMessage(event.target.attributes.newMessage.value)
+                    changeMessage(event.target.attributes.newmessage.value)
                 }}>Agregar al carrito</button>
             </div>
     )
