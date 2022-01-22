@@ -1,33 +1,29 @@
-import React from 'react'
-import ItemList from './ItemList'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Loader from './Loader'
 import {getDocs, collection, query, where, orderBy} from 'firebase/firestore';
 import db from '../services/firebase';
-
+import ItemList from './ItemList'
+import Loader from './Loader'
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
-    const [isLoading, setLoading] = useState(false);
+    const [isLoading, setLoading] = useState(true);
     const {categoryId} = useParams();
     
-    useEffect( async () => {
-
-        setLoading (true);
+    useEffect( () => {
 
         const myProducts = categoryId ?
         query(collection(db,'products'), where('category', '==', categoryId), orderBy('price'))
         :
         query(collection(db,'products'), orderBy('price'));
 
-        const querySnapshot = await getDocs(myProducts)
-
-        setProducts(querySnapshot.docs.map ( e => {
-            return {...e.data(), id: e.id}
-        }))
-
-        setLoading(false)
+        getDocs(myProducts)
+        .then( querySnapshot => {
+            setProducts( querySnapshot.docs.map ( e => {
+                return {...e.data(), id: e.id}
+            }))
+            setLoading (false);
+        })
 
     }, [categoryId])
     

@@ -1,28 +1,24 @@
-import React from 'react'
-import ItemDetail from './ItemDetail'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import Loader from './Loader'
-import db from '../services/firebase'
 import { doc, getDoc } from 'firebase/firestore'
+import db from '../services/firebase'
+import Loader from './Loader'
+import ItemDetail from './ItemDetail'
 
 
 const ItemDetailContainer = () => {
+    const [isLoading, setLoading] = useState(true);
     const [product, setProduct] = useState([])
     const {productId} = useParams();
-    const [isLoading, setLoading] = useState(false);
-
-    useEffect(() => {
-
-        setLoading (true);
+    
+    useEffect( () => {
         
-        const reference = doc(db, 'products', productId)
+        const reference = doc (db, 'products', productId)
 
         getDoc(reference).then( querySnapshot => {
             setProduct({...querySnapshot.data(), id: querySnapshot.id})
+            setLoading (false);
         } )
-
-        setLoading (false);
 
     }, [productId])
 

@@ -1,19 +1,26 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { CartContext } from './context/CartContext';
+import { useContext } from 'react';
 import './assets/scss/styles.scss'
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './components/Home';
 import Cart from './components/Cart';
-import { CartContextProvider } from './context/CartContext';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import Checkout from './components/Checkout';
+import Message from './components/Message';
+
+
 
 function App() {
 
+  const {active, message} = useContext(CartContext)
+
   return (
-    <CartContextProvider>
+
       <Router>
         <NavBar/>
+        {active ? <Message message={message}/> : ""}
         <Routes>
           <Route path="" element={<Home/>}/>
           <Route path="cart" element={<Cart/>}/>
@@ -23,7 +30,7 @@ function App() {
           <Route path="checkout" element={<Checkout/>} />
         </Routes>
       </Router>
-    </CartContextProvider>
+    
   )
 }
 

@@ -1,11 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
-import Message from './Message';
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../context/CartContext';
 
-const ItemCount = ({stock,onAdd}) => {
+const ItemCount = ({stock, onAdd}) => {
+
     const [quantity, setQuantity] = useState(1);
-    const [active, setActive] = useState (false)
-    const [message, setMessage] = useState ('')
+    const {changeMessage} = useContext(CartContext)
 
     function modifyAmount(e) {
         if (e.target.id === 'increase') {
@@ -15,38 +14,31 @@ const ItemCount = ({stock,onAdd}) => {
             setQuantity(quantity-1)
         }
     }
-    function activate() {
-        setActive(true)
-        setTimeout(() => {
-            setActive(false)
-        }, 3000);
-    }
+
     return (
-        <>
             <div className='amount'>
                 <p className='stock'>Stock: {stock}</p>
                 <div className='controls'>
                     {quantity <= 1 
                     ?
-                    <button onClick={() => {
-                        setMessage('La cantidad no puede ser inferior a uno')
-                        activate()
+                    <button newMessage='La cantidad no puede ser inferior a uno' onClick={(event) => {
+                        changeMessage(event.target.attributes.newMessage.value)
                     }}>-</button>
                     :
                     <button onClick={modifyAmount} id='decrease'>-</button>}
                     <span>{quantity}</span>
                     {quantity >= stock ?
-                    <button onClick={() => {
-                        setMessage('La cantidad no puede superar el stock disponible')
-                        activate()
+                    <button newMessage='La cantidad no puede superar el stock disponible' onClick={(event) => {
+                        changeMessage(event.target.attributes.newMessage.value)
                     }}>+</button>
                     :
                     <button onClick={modifyAmount} id='increase'>+</button>}
                 </div>
-                <button className='addCart' value={quantity} onClick={onAdd}>Agregar al carrito</button>
+                <button className='addCart' newMessage='Producto agregado correctamente' value={quantity} onClick={ (event) => {
+                    onAdd(event)
+                    changeMessage(event.target.attributes.newMessage.value)
+                }}>Agregar al carrito</button>
             </div>
-            {active ? <Message message={message}/> : ""}
-        </>
     )
 }
 

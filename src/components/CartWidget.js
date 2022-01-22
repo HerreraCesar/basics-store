@@ -11,18 +11,14 @@ const CartWidget = () => {
         });
     }
     return (
-        <>
-        {
-            number !== 0
-            ?
             <div className='cartWidget'>
+                {number !== 0 ?
                 <span>{number} </span>
+                :
+                ''
+                }
                 <i className="fas fa-shopping-bag"></i>
             </div>
-            :
-            ""
-        }
-        </>
     )
 }
 

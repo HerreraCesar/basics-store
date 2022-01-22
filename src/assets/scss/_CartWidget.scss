@@ -7,6 +7,8 @@
     text-align: end;
     transition: 0.5s;
     border-radius: 30%;
+    position: absolute;
+    right: 2rem;
 }
 
 .cartWidget i {
@@ -20,7 +22,8 @@
 }
 
 .cartWidget span {
-margin-right: 0.5rem;
-font-weight: 600;
-font-size: 1.1rem;
+    margin-right: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: $darkVariant;
 }

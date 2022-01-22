@@ -13,16 +13,22 @@
     overflow: hidden;
 }
 
-.detailContainer img{
-    width: 30rem;
-    height: 30rem;
+.image{
+    /* max-width: 100%;
+    min-width: 100%; */
     border-radius: $curve;
-    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* pointer-events: none; */
+    width: 100%;
 }
 
 /* .detailContainer img:hover{
     transform: scale(1.2);
 } */
+
 
 .detailContainer .name{
     padding-left: 2rem;

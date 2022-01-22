@@ -4,9 +4,13 @@ export const CartContext = createContext({
     cart: []
 });
 
+
+
 export function CartContextProvider({children}) {
 
     const [cart, setCart] = useState([]);
+    const [active, setActive] = useState (false)
+    const [message, setMessage] = useState ('')
 
     function addToCart(product) {
         setCart ( (existing) => {
@@ -40,6 +44,15 @@ export function CartContextProvider({children}) {
         setCart(cart.concat([]))
     }
 
+    function changeMessage(newMessage) {
+        console.log(newMessage);
+        setMessage(newMessage)
+        setActive(true)
+        setTimeout(() => {
+            setActive(false)
+        }, 3000);
+    }
+
     const context = {
         cart: cart,
         total: cart.length,
@@ -48,7 +61,10 @@ export function CartContextProvider({children}) {
         productIsInCart: productIsInCart,
         clearCart: clearCart,
         moreQuantity:moreQuantity,
-        lessQuantity:lessQuantity
+        lessQuantity:lessQuantity,
+        active:active,
+        message:message,
+        changeMessage:changeMessage
     }
 
     return (

@@ -11,7 +11,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     padding: 0.5rem 1.4rem;
-    background-color: $lightVariant;
+    background-color: $darkVariant;
 }
 
 .price {
@@ -19,16 +19,16 @@
     font-weight: 700;
     padding: 1rem 1.4rem;
     display: block;
-    background-color: $lightVariant;
+    background-color: $darkVariant;
     border-bottom-right-radius: $curve;
     border-bottom-left-radius: $curve;
 }
 
 .product {
-    background-color: $lightVariant;
+    background-color: $darkVariant;
     border-radius: $curve;
 }
 
 a {
-    color: $darkVariant;
+    color: $lightVariant;
 }
