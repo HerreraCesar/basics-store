@@ -12,9 +12,7 @@ const ItemListContainer = () => {
     
     useEffect( () => {
 
-        console.log(query(collection(db,'products'), where('offer', '==', true), orderBy('price')));
-
-        const myProducts = categoryId == 'offers' ?
+        const myProducts = categoryId === 'offers' ?
         query(collection(db,'products'), where('offer', '==', true), orderBy('price'))
         :
         query(collection(db,'products'), where('category', '==', categoryId), orderBy('price'))

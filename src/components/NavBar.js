@@ -38,7 +38,8 @@ const NavBar = () => {
                 {categories.map( category => <NavLink to={`products/${category}`} key={category}>{category}</NavLink> )}
                 <NavLink to="products/offers" id='offers'>OFERTAS</NavLink>
             </div>
-            <Link to="cart"><CartWidget/></Link>
+            <Link to="search" className='searchWidget'><i className="fas fa-search"></i></Link>
+            <Link to="cart" className='cartWidget'><CartWidget/></Link>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Checkout from './components/Checkout';
 import Message from './components/Message';
+import Search from './components/Search';
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="products/:categoryId" element={<ItemListContainer />} />
           <Route path="products/details/:productId" element={<ItemDetailContainer />} />
           <Route path="checkout" element={<Checkout/>} />
+          <Route path="search" element={<Search/>} />
         </Routes>
       </Router>
     

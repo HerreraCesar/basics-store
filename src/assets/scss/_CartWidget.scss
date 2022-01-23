@@ -2,13 +2,14 @@
 @import "mixins";
 
 .cartWidget {
-    margin-right: 2rem;
-    margin-left: 10rem;
-    text-align: end;
+    /* margin-right: 2rem;
+    margin-left: 10rem; */
+    /* text-align: end; */
     transition: 0.5s;
-    border-radius: 30%;
+    /* border-radius: 30%; */
     position: absolute;
     right: 2rem;
+    margin: auto;
 }
 
 .cartWidget i {

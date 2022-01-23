@@ -9,6 +9,9 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+        display: none;
+        }
 }
 
 @import "NavBar";
@@ -23,6 +26,7 @@
 @import "Cart";
 @import "Message";
 @import "Checkout";
+@import "Search";
 
 .home {
     display: flex;

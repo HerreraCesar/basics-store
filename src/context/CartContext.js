@@ -1,27 +1,35 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext({
     cart: []
 });
 
 
-
 export function CartContextProvider({children}) {
 
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState( () =>{
+        const localData = localStorage.getItem('cart')
+        return localData ? JSON.parse(localData) : []
+    });
     const [active, setActive] = useState (false)
     const [message, setMessage] = useState ('')
+
+    useEffect( () => {
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart])
 
     function addToCart(product) {
         setCart ( (existing) => {
             return existing.concat(product)
         })
+    
     }
 
     function removeFromCart(product) {
         setCart ( (existing) => {
             return existing.filter ( p => p.id !== product.id)
         })
+
     }
 
     function productIsInCart(product) {
@@ -30,18 +38,21 @@ export function CartContextProvider({children}) {
 
     function clearCart() {
         setCart([])
+
     }
 
     function moreQuantity(product) {
         const position = cart.findIndex(p => p.id === product.id)
         cart[position].quantity = parseInt(cart[position].quantity) + 1
         setCart(cart.concat([]))
+ 
     }
 
     function lessQuantity(product) {
         const position = cart.findIndex(p => p.id === product.id)
         cart[position].quantity = parseInt(cart[position].quantity) - 1
         setCart(cart.concat([]))
+        
     }
 
     function changeMessage(newMessage) {

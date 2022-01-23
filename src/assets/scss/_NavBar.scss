@@ -45,3 +45,20 @@
     color: red;
     font-weight: 600;
 }
+
+.searchWidget {
+    margin: auto;
+    position: absolute;
+    right: 7rem;
+    font-size: 0.8rem;
+}
+
+.searchWidget i {
+    font-size: 1.4rem;
+    color: $darkVariant;
+    cursor: pointer;
+}
+
+.searchWidget:hover i{
+    color: $focusVariant;
+}
