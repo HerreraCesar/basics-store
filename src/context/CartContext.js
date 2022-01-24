@@ -13,6 +13,7 @@ export function CartContextProvider({children}) {
     });
     const [active, setActive] = useState (false)
     const [message, setMessage] = useState ('')
+    const [order, setOrder] = useState ({type: 'price', direction:'asc'})
 
     useEffect( () => {
         localStorage.setItem('cart', JSON.stringify(cart))
@@ -63,6 +64,33 @@ export function CartContextProvider({children}) {
         }, 3000);
     }
 
+    function applyFilter (e) {
+
+
+        switch (e) {
+
+            case 'priceUp':
+                setOrder({type: 'price', direction:'asc'})
+                break;
+
+            case 'priceDown':
+                setOrder({type: 'price', direction:'desc'})
+                break;
+        
+            case 'nameUp':
+                setOrder({type: 'name', direction:'asc'})
+                break;
+
+            case 'nameDown':
+                setOrder({type: 'name', direction:'desc'})
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
     const context = {
         cart: cart,
         total: cart.length,
@@ -70,11 +98,13 @@ export function CartContextProvider({children}) {
         removeFromCart: removeFromCart,
         productIsInCart: productIsInCart,
         clearCart: clearCart,
-        moreQuantity:moreQuantity,
-        lessQuantity:lessQuantity,
-        active:active,
-        message:message,
-        changeMessage:changeMessage
+        moreQuantity: moreQuantity,
+        lessQuantity: lessQuantity,
+        active: active,
+        message: message,
+        changeMessage: changeMessage,
+        order: order,
+        applyFilter: applyFilter
     }
 
     return (

@@ -12,6 +12,7 @@
 
 .searchBoxMin {
     width: 100%;
+    /* min-height: 100vh; */
     margin-top: 7rem;
     min-height: 5rem;
     padding: 0rem 2rem;
@@ -22,11 +23,17 @@
 
 .search {
     font-size: 5rem;
-    height: 5rem;
+    font-weight: 500;
+    height: 6rem;
     width: 100%;
     margin: auto;
     /* margin-top: 6rem; */
     border: none;
-    border-bottom: 5px solid $dark;
+    border-bottom: 5px solid $darkVariant;
     outline: none;
+    padding-bottom: 1rem;
+}
+
+.search::placeholder {
+    color: $lightVariant;
 }

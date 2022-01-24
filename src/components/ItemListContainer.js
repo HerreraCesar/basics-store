@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {getDocs, collection, query, where, orderBy} from 'firebase/firestore';
 import db from '../services/firebase';
 import ItemList from './ItemList'
 import Loader from './Loader'
+import { CartContext } from '../context/CartContext';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [isLoading, setLoading] = useState(true);
     const {categoryId, } = useParams();
+    const {order} = useContext(CartContext)
     
     useEffect( () => {
 
         const myProducts = categoryId === 'offers' ?
-        query(collection(db,'products'), where('offer', '==', true), orderBy('price'))
+        query(collection(db,'products'), where('offer', '==', true), orderBy(order.type, order.direction))
         :
-        query(collection(db,'products'), where('category', '==', categoryId), orderBy('price'))
+        query(collection(db,'products'), where('category', '==', categoryId), orderBy(order.type, order.direction))
 
          getDocs(myProducts)
         .then( querySnapshot => {
@@ -25,7 +27,7 @@ const ItemListContainer = () => {
             setLoading (false);
         })
 
-    }, [categoryId])
+    }, [categoryId, order])
     
 
     return (

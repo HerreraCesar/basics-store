@@ -6,7 +6,7 @@ import ItemList from './ItemList';
 
 const Search = () => {
 
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState('')
     const [result, setResult] = useState([])
     const [products, setProducts] = useState([])
     const [isLoading, setLoading] = useState(true);
@@ -38,17 +38,19 @@ const Search = () => {
 
   return(
         <>
-            <div className={active == '' ? 'searchBox' : 'searchBoxMin'}>
+            <div className={active === '' ? 'searchBox' : 'searchBoxMin'}>
                 {isLoading ? <Loader/> :
-                <input className='search' type='text' onKeyUp= { (e) => {
+                <input placeholder='Search...' className='search' type='text' onKeyUp= { (e) => {
                     setActive(e.target.value)
                     getFilteredItems( e, products)
                 }}></input>}
                 
             </div>
             <div className='box'>
-                {active == ''?
-                '' : <ItemList products={result}/> }
+                
+            {active === '' ? '' :<ItemList products={result}/>}
+
+                
             </div>
         </>
     )
