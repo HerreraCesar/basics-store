@@ -1,0 +1,147 @@
+@import "variables";
+@import "mixins";
+
+.cart {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    justify-content: center;
+}
+
+.cart h1 {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: $darkVariant;
+}
+
+.cart h3 {
+    padding-bottom: 1rem;
+    margin-left: 2rem;
+    color: $darkVariant;
+}
+
+.cart h3 span {
+    color: $dark;
+}
+
+.resumeBox {
+    padding-top: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.total {
+    margin: 2rem 0rem;
+    /* position: relative;
+    bottom: 0; */
+    /* justify-self:space-between; */
+}
+
+.total .button {
+    width: 14rem;
+}
+
+.total .button a {
+    color: $dark;
+}
+
+.total .button:hover {
+    background-color: $focusVariant;
+}
+
+.cartBox {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.resume {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid $lightVariant; */
+    /* background-color: $light; */
+    border-radius: $curve;
+    box-shadow: 1px 1px 10px $lightVariant;
+}
+
+.resume .photo {
+    width: 8rem;
+    height: 8rem;
+    border-top-left-radius: $curve;
+    border-bottom-left-radius: $curve;
+    border-top-right-radius: 0;
+}
+
+.resume a {
+    width: 25rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $darkVariant;
+}
+
+.resume a p{
+    /* width: 25rem; */
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $dark;
+    margin-top: 0.5rem;
+}
+
+.resume button {
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: transparent;
+    border: 2px solid $dark;
+    border-radius: $curve;
+    font-size: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.resume button:hover {
+    background-color: $focusVariant;
+}
+
+.subQuantity {
+    /* margin: auto; */
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.subTotal {
+    font-size: 1.6rem;
+    color: $dark;
+    width: 7rem;
+    padding-left: 1rem;
+}
+
+.delete {
+    font-size: 1.4rem;
+    color: $darkVariant;
+    padding: 1rem;
+    padding-right: 3rem;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: $focusVariant;
+}
+
+.order {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.order h1 {
+    padding: 0rem 1rem;
+}
+
+.order button {
+    margin: 2rem 1rem;
+}

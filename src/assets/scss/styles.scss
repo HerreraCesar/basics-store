@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixins";
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+        display: none;
+        }
+}
+
+@import "NavBar";
+@import "CartWidget";
+@import "ItemCount";
+@import "ItemListContainer";
+@import "ItemList";
+@import "Item";
+@import "ItemDetailContainer";
+@import "ItemDetail";
+@import "Loader";
+@import "Cart";
+@import "Message";
+@import "Checkout";
+@import "Search";
+@import "FilterWidget";
+
+.home {
+    display: flex;
+    height: 100vh;
+}
+
+.home h1 {
+    margin: auto;
+    font-size: 2rem;
+    color: $darkVariant;
+}
+
+.subir {
+    margin-top: 10rem;
+}

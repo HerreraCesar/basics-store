@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+
+.detailContainer {
+    /* width: 80%;
+    height: 30rem;
+    margin: auto; */
+    width: 100vw;
+    height: 100vh;
+    /* padding: 8rem 0rem; */
+    /* margin: auto; */
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.image{
+    /* max-width: 100%;
+    min-width: 100%; */
+    border-radius: $curve;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* pointer-events: none; */
+    width: 100%;
+}
+
+/* .detailContainer img:hover{
+    transform: scale(1.2);
+} */
+
+
+.detailContainer .name{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: transparent;
+}
+
+.detailContainer .price{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.detailContainer .amount{
+    background-color: transparent;
+}

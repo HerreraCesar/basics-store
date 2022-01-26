@@ -1,0 +1,30 @@
+@import "variables";
+@import "mixins";
+
+.cartWidget {
+    /* margin-right: 2rem;
+    margin-left: 10rem; */
+    /* text-align: end; */
+    transition: 0.5s;
+    /* border-radius: 30%; */
+    position: absolute;
+    right: 2rem;
+    margin: auto;
+}
+
+.cartWidget i {
+    font-size: 1.4rem;
+    color: $darkVariant;
+    cursor: pointer;
+}
+
+.cartWidget:hover i{
+    color: $focusVariant;
+}
+
+.cartWidget span {
+    margin-right: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: $darkVariant;
+}
