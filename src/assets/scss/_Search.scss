@@ -37,3 +37,10 @@
 .search::placeholder {
     color: $lightVariant;
 }
+
+.no-result {
+    padding: 6rem 2rem;
+    color: $darkVariant;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
