@@ -5,6 +5,7 @@ const Item = ({ product }) => {
   return (
     <Link className="product" to={`/products/details/${product.id}`}>
       {product.offer ? <span className="offer">oferta!</span> : ""}
+      {product.stock === 0? <span className="offer">SIN STOCK</span> : ""}
       <img className="photo" src={product.photo} alt={product.name} />
       <h2 className="name">{product.name}</h2>
       <span className="price">$ {product.price}</span>

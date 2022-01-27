@@ -37,7 +37,7 @@ const ItemDetail = ({ product }) => {
 
     clientX = (clientX / mWidth) * 100;
     clientY = (clientY / mHeight) * 100;
-    setCoordinates({ x: clientX, y: clientY, z: 1.25 });
+    setCoordinates({ x: clientX, y: clientY, z: 1.1 });
   }
 
   const styles = {
@@ -75,7 +75,7 @@ const ItemDetail = ({ product }) => {
               Volver
             </button>
           </div>
-        ) : (
+        ) : product.stock === 0? '' : (
           <ItemCount onAdd={onAdd} stock={product.stock} />
         )}
       </div>
