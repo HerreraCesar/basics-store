@@ -9,9 +9,9 @@ export function CartContextProvider({ children }) {
     const localData = localStorage.getItem("cart");
     return localData ? JSON.parse(localData) : [];
   });
-  const [purchase, setPurchase] = useState ({
-    'total': 0,
-  })
+  const [purchase, setPurchase] = useState({
+    total: 0,
+  });
   const [active, setActive] = useState(false);
   const [message, setMessage] = useState("");
   const [order, setOrder] = useState({ type: "price", direction: "asc" });
@@ -52,10 +52,10 @@ export function CartContextProvider({ children }) {
     setCart(cart.concat([]));
   }
 
-  function addTotal (total) {
+  function addTotal(total) {
     setPurchase({
-      'total': total,
-    })
+      total: total,
+    });
   }
 
   function changeMessage(newMessage) {
@@ -91,20 +91,19 @@ export function CartContextProvider({ children }) {
 
   const context = {
     cart: cart,
-    total: cart.length,
+    active: active,
+    message: message,
+    order: order,
+    purchase: purchase,
     addToCart: addToCart,
     removeFromCart: removeFromCart,
     productIsInCart: productIsInCart,
     clearCart: clearCart,
     moreQuantity: moreQuantity,
     lessQuantity: lessQuantity,
-    active: active,
-    message: message,
     changeMessage: changeMessage,
-    order: order,
     applyFilter: applyFilter,
     addTotal: addTotal,
-    purchase: purchase
   };
 
   return (

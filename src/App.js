@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CartContext } from "./context/CartContext";
 import { useContext } from "react";
-import "./assets/scss/styles.scss";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import Home from "./components/Home";
-import Cart from "./components/Cart";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import Checkout from "./components/Checkout";
+import Cart from "./components/cart/Cart";
+import ItemListContainer from "./components/containers/ItemListContainer";
+import ItemDetailContainer from "./components/containers/ItemDetailContainer";
+import Checkout from "./components/cart/Checkout";
 import Message from "./components/Message";
 import Search from "./components/Search";
 

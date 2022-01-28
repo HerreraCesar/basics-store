@@ -1,0 +1,15 @@
+@import "../../variables";
+@import "../../mixins";
+
+.purchase {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.purchase form {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}

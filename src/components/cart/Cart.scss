@@ -1,0 +1,168 @@
+@import "../../variables";
+@import "../../mixins";
+
+.cart {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  justify-content: center;
+}
+
+.cart h1 {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  color: $darkVariant;
+}
+
+.cart h3 {
+  margin-left: 2rem;
+  color: $darkVariant;
+}
+
+.cart h3 span {
+  color: $dark;
+}
+
+.cart h3 span:hover {
+  transition: all 0.5s;
+
+  text-shadow: 1px 1px 1px $focusVariant;
+}
+
+.resumeBox {
+  padding-top: 5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.total {
+  margin-top: 2rem;
+}
+
+.total .button {
+  width: 14rem;
+  border: 2px solid transparent;
+}
+
+.total .button a {
+  color: $dark;
+}
+
+.total .button:hover {
+  transition: all 0.5s;
+  color: $darkVariant;
+  text-shadow: 1px 1px 1px $focusVariant;
+  border: 2px solid $dark;
+  box-shadow: 1px 1px 1px $focusVariant, inset 1px 1px 1px $focusVariant;
+}
+
+.cartBox {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.resume {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: $curve;
+  box-shadow: 1px 1px 10px $lightVariant;
+}
+
+.resume .photo {
+  width: 8rem;
+  height: 8rem;
+  border-top-left-radius: $curve;
+  border-bottom-left-radius: $curve;
+  border-top-right-radius: 0;
+}
+
+.resume a {
+  width: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $darkVariant;
+  margin: auto;
+  margin-left: 2rem;
+}
+
+.resume a p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $dark;
+  margin-top: 0.5rem;
+}
+
+.resume button {
+  border: 2px solid transparent;
+  min-width: 2.4rem;
+  height: 2.4rem;
+  background-color: transparent;
+  box-shadow: 1px 1px 3px $darkVariant;
+  border-radius: $curve;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  margin: 0rem 1rem;
+}
+
+.resume button:hover {
+  transition: all 0.5s;
+  border: 2px solid $dark;
+  color: $darkVariant;
+  text-shadow: 1px 1px 1px $focusVariant;
+  box-shadow: 1px 1px 1px $focusVariant, inset 1px 1px 1px $focusVariant;
+}
+
+.subQuantity {
+  font-size: 1.6rem;
+  font-weight: 700;
+  min-width: 4rem;
+  text-align: center;
+}
+
+.subTotal {
+  font-size: 1.6rem;
+  color: $dark;
+  min-width: 8rem;
+  text-align: center;
+}
+
+.delete {
+  border-radius: $curve;
+  border: 2px solid transparent;
+  box-shadow: 1px 1px 3px $darkVariant;
+  font-size: 1.4rem;
+  color: $darkVariant;
+  padding: 1rem;
+  margin: 0rem 1rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.delete:hover {
+  transition: all 0.5s;
+  border: 2px solid $dark;
+  color: $darkVariant;
+  text-shadow: 1px 1px 1px $focusVariant;
+  box-shadow: 1px 1px 1px $focusVariant, inset 1px 1px 1px $focusVariant;
+}
+
+.order {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.order h1 {
+  padding: 0rem 1rem;
+}
+
+.order button {
+  margin: 2rem 1rem;
+}

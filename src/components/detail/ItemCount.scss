@@ -1,0 +1,71 @@
+@import "../../variables";
+@import "../../mixins";
+
+.amount {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $lightVariant;
+  border-bottom-right-radius: $curve;
+  border-bottom-left-radius: $curve;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.stock {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: $darkVariant;
+}
+
+.controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+}
+
+.controls button {
+  height: 2.4rem;
+  background-color: transparent;
+  border-radius: $curve;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  border: 2px solid transparent;
+  min-width: 2.4rem;
+  background-color: $light;
+  box-shadow: 1px 1px 3px $darkVariant;
+}
+
+.controls button:hover {
+  transition: all 0.5s;
+  border: 2px solid $dark;
+  color: $darkVariant;
+  text-shadow: 1px 1px 1px $focusVariant;
+  box-shadow: 1px 1px 1px $focusVariant, inset 1px 1px 1px $focusVariant;
+}
+
+.controls span {
+  margin: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.addCart {
+  font-size: 1rem;
+  height: 2.4rem;
+  background-color: $light;
+  border-radius: $curve;
+  border: 2px solid transparent;
+  box-shadow: 1px 1px 3px $darkVariant;
+  cursor: pointer;
+}
+
+.addCart:hover {
+  transition: all 0.5s;
+  border: 2px solid $dark;
+  color: $darkVariant;
+  text-shadow: 1px 1px 1px $focusVariant;
+  box-shadow: 1px 1px 1px $focusVariant, inset 1px 1px 1px $focusVariant;
+}

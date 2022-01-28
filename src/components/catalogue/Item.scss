@@ -1,0 +1,60 @@
+@import "../../variables";
+@import "../../mixins";
+
+.photo {
+  width: 100%;
+  border-top-right-radius: $curve;
+  border-top-left-radius: $curve;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1.4rem;
+  background-color: $darkVariant;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem 1.4rem;
+  display: block;
+  background-color: $darkVariant;
+  border-bottom-right-radius: $curve;
+  border-bottom-left-radius: $curve;
+}
+
+.product {
+  background-color: $darkVariant;
+  border-radius: $curve;
+  position: relative;
+}
+
+a {
+  color: $lightVariant;
+}
+
+.offer {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: $focusVariant;
+  font-weight: 500;
+}
+
+.stockText {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: $focus;
+  font-weight: 500;
+}
+
+.product:hover h2 {
+  color: $focusVariant;
+}
+.product:hover span {
+  color: $focusVariant;
+}

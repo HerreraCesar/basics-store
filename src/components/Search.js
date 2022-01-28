@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getDocs, collection, query } from "firebase/firestore";
 import db from "../services/firebase";
 import Loader from "./Loader";
-import ItemList from "./ItemList";
+import ItemList from "./catalogue/ItemList";
 
 const Search = () => {
   const [active, setActive] = useState("");
