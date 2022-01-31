@@ -9,8 +9,9 @@ export function CartContextProvider({ children }) {
     const localData = localStorage.getItem("cart");
     return localData ? JSON.parse(localData) : [];
   });
-  const [purchase, setPurchase] = useState({
-    total: 0,
+  const [purchase, setPurchase] = useState(() => {
+    const localData = localStorage.getItem("purchase");
+    return localData ? JSON.parse(localData) : 0;
   });
   const [active, setActive] = useState(false);
   const [message, setMessage] = useState("");

@@ -12,4 +12,44 @@
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
+  width: 40rem;
+}
+
+.purchase input {
+  height: 3rem;
+  border: none;
+  border-bottom: 2px solid $darkVariant;
+  font-size: 1.2rem;
+  outline: none;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px $focusVariant inset;
+    box-shadow: 0 0 0px 1000px $focusVariant inset;
+}
+
+.purchase input:valid {
+  background-color: $focusVariant;
+}
+
+/* .purchase input:invalid {
+  background-color: $focus;
+} */
+
+.purchase input::placeholder {
+  font-size: 1.2rem;
+  color: rgb(167, 167, 167);
+}
+
+.purchase h2 {
+  /* margin-left: 1rem; */
+  margin-bottom: 1rem;
+}
+
+.purchase button {
+  margin-top: 3rem;
 }
