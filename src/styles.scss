@@ -15,9 +15,11 @@
 }
 
 @import "components/navbar/NavBar.scss";
+@import "components/footer/Footer.scss";
 @import "components/Search.scss";
 @import "components/Message.scss";
 @import "components/Loader.scss";
+@import "components/Home.scss";
 @import "components/containers/ItemListContainer.scss";
 @import "components/containers/ItemDetailContainer.scss";
 @import "components/catalogue/ItemList.scss";
@@ -28,18 +30,3 @@
 @import "components/cart/Cart.scss";
 @import "components/cart/CartWidget.scss";
 @import "components/cart/Checkout.scss";
-
-.home {
-  display: flex;
-  height: 100vh;
-}
-
-.home h1 {
-  margin: auto;
-  font-size: 2rem;
-  color: $darkVariant;
-}
-
-.subir {
-  margin-top: 10rem;
-}

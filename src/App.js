@@ -9,6 +9,7 @@ import ItemDetailContainer from "./components/containers/ItemDetailContainer";
 import Checkout from "./components/cart/Checkout";
 import Message from "./components/Message";
 import Search from "./components/Search";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const { active, message } = useContext(CartContext);
@@ -29,6 +30,7 @@ function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="search" element={<Search />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
