@@ -5,7 +5,7 @@
   display: flex;
   flex-flow: row nowrap;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 4rem;
   align-items: center;
   background-color: $light;
@@ -55,7 +55,7 @@
 .searchWidget {
   margin: auto;
   position: absolute;
-  right: 6rem;
+  right: 5rem;
   font-size: 0.8rem;
 }
 

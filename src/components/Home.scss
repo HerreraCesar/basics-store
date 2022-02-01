@@ -2,34 +2,75 @@
 @import "../mixins";
 
 .home {
-    display: flex;
-    min-height: 100vh;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    background-image: url(https://www.collinsdictionary.com/images/full/supermarket_406913140_1000.jpg);
-    background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://raw.githubusercontent.com/HerreraCesar/basics-store/main/src/assets/backgrounds/3.jpg);
+  background-size: cover;
+  background-position: center;
 }
+
+.container h1 {
+  text-align: center;
+  font-size: 1.4rem;
+  color: $darkVariant;
+  font-weight: 400;
+  margin-top: 5rem;
+  margin-bottom: -2.5rem;
   
-.home h1 {
-    margin: auto;
-    font-size: 2rem;
-    color: $darkVariant;
 }
 
 .home div {
-    margin: 0rem 2rem ;
-    width: 25rem;
-    height: 30rem;
-    background-color: rgba(255, 255, 255, 0.87);
-    border-radius: $curve;
-    backdrop-filter: blur(5px);
-    display: flex;
+  margin: 0rem 2rem;
+  width: 90%;
+  height: 30rem;
+  background-color: rgb(255, 255, 255, 0.5);
+  /* border-radius: $curve; */
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  /* animation: ; */
+}
+
+@keyframes move {
+  from {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
 }
 
 .home div span {
-    color: $darkVariant;
-    font-size: 2rem;
-    font-weight: 500;
-    margin: auto;
+  /* color: $dark; */
+  font-size: 4rem;
+  font-weight: 700;
+  /* margin: auto; */
+  animation: move 4s infinite;
+  color: transparent;
+  position: relative;
+  background-image: url(https://i.ibb.co/6PkxsFW/7.jpg);
+  background-size: 500%;
+  background-repeat: no-repeat;
+  /* transition: background-position 2s ease-in-out; */
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+
+}
+
+.home div p {
+  font-size: 1.4rem;
+  color: $darkVariant;
+  font-weight: 500;
+  margin-top: 1rem;
 }

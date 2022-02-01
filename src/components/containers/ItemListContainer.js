@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { getDocs, collection, query, where, orderBy } from "firebase/firestore";
 import db from "../../services/firebase";
 import ItemList from "../catalogue/ItemList";
@@ -11,6 +11,7 @@ const ItemListContainer = () => {
   const [isLoading, setLoading] = useState(true);
   const { categoryId } = useParams();
   const { order } = useContext(CartContext);
+  let location = useLocation();
 
   useEffect(() => {
     const myProducts =
@@ -37,7 +38,7 @@ const ItemListContainer = () => {
   }, [categoryId, order]);
 
   return (
-    <div className="box">
+    <div className={location.pathname === "/search" ? "box" : "boxHeight box"}>
       {isLoading ? <Loader /> : <ItemList products={products} />}
     </div>
   );

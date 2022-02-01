@@ -53,3 +53,15 @@ input:-webkit-autofill:focus {
 .purchase button {
   margin-top: 3rem;
 }
+
+.button:disabled:hover {
+  border: 2px solid transparent;
+  color: rgba(151, 151, 151, 0.726);
+  text-shadow: none;
+  box-shadow: 1px 1px 3px $darkVariant;
+  cursor: default;
+}
+
+.button:disabled {
+  color: rgba(151, 151, 151, 0.726);
+}
