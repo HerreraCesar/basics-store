@@ -13,7 +13,11 @@ const ItemList = ({ products }) => {
           <Item product={product} key={product.id} />
         ))}
       </div>
-      {location.pathname === "/search" || location.pathname === "/"? "" : <FiltersWidget />}
+      {location.pathname === "/search" || location.pathname === "/" ? (
+        ""
+      ) : (
+        <FiltersWidget />
+      )}
     </>
   );
 };

@@ -14,10 +14,15 @@
 .footer p {
     font-size: 1rem;
     color: $darkVariant;
+    text-align: center;
 }
 
 .footer a {
     color: $dark;
     margin-top: 1rem;
     font-size: 1.2rem;
+}
+
+.footer br {
+    display: none;
 }

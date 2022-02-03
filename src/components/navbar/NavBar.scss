@@ -10,7 +10,7 @@
   align-items: center;
   background-color: $light;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
 
 .links a {
@@ -69,4 +69,8 @@
 .searchWidget:hover i {
   transition: all 0.5s;
   text-shadow: 1px 1px 1px $focusVariant;
+}
+
+.NavBar button {
+  display: none;
 }

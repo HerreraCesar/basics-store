@@ -20,6 +20,9 @@ export function CartContextProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+  useEffect(() => {
+    localStorage.setItem("purchase", JSON.stringify(purchase));
+  }, [purchase]);
 
   function addToCart(product) {
     setCart((existing) => {
@@ -57,6 +60,10 @@ export function CartContextProvider({ children }) {
     setPurchase({
       total: total,
     });
+  }
+
+  function clearPurchase() {
+    setPurchase(0);
   }
 
   function changeMessage(newMessage) {
@@ -105,6 +112,7 @@ export function CartContextProvider({ children }) {
     changeMessage: changeMessage,
     applyFilter: applyFilter,
     addTotal: addTotal,
+    clearPurchase: clearPurchase,
   };
 
   return (

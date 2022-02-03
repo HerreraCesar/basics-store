@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import "../../variables";
+@import "../../mixins";
 
 .home {
   display: flex;
@@ -19,22 +19,18 @@
   font-weight: 400;
   margin-top: 5rem;
   margin-bottom: -2.5rem;
-  
 }
 
 .home div {
-  margin: 0rem 2rem;
+  margin: 4rem 2rem 0rem 2rem;
   width: 90%;
   height: 30rem;
   background-color: rgb(255, 255, 255, 0.5);
-  /* border-radius: $curve; */
   backdrop-filter: blur(5px);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  
-  /* animation: ; */
 }
 
 @keyframes move {
@@ -50,22 +46,17 @@
 }
 
 .home div span {
-  /* color: $dark; */
   font-size: 4rem;
   font-weight: 700;
-  /* margin: auto; */
   animation: move 4s infinite;
   color: transparent;
   position: relative;
-  background-image: url(https://i.ibb.co/6PkxsFW/7.jpg);
+  background-image: url(https://raw.githubusercontent.com/HerreraCesar/basics-store/main/src/assets/backgrounds/7.jpg);
   background-size: 500%;
   background-repeat: no-repeat;
-  /* transition: background-position 2s ease-in-out; */
   background-position: center;
   background-clip: text;
   -webkit-background-clip: text;
-  
-
 }
 
 .home div p {

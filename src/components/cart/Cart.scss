@@ -73,6 +73,10 @@
   box-shadow: 1px 1px 10px $lightVariant;
 }
 
+/* .resume br {
+  display: none;
+} */
+
 .resume .photo {
   width: 8rem;
   height: 8rem;
@@ -166,4 +170,19 @@
 
 .order button {
   margin: 2rem 1rem;
+}
+
+.control {
+  width: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productResume {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }

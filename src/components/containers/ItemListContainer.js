@@ -3,7 +3,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { getDocs, collection, query, where, orderBy } from "firebase/firestore";
 import db from "../../services/firebase";
 import ItemList from "../catalogue/ItemList";
-import Loader from "../Loader";
+import Loader from "../loader/Loader";
 import { CartContext } from "../../context/CartContext";
 
 const ItemListContainer = () => {

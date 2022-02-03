@@ -68,17 +68,19 @@ const ItemDetail = ({ product }) => {
         </div>
         {added === true || productIsInCart(product) === true ? (
           <div>
-          <p className="noStock">Producto en carrito</p>
-          <div className="buttonsContainer">
-            <Link to="/cart">
-              <button className="button">Ir al carrito</button>
-            </Link>
-            <button className="button" onClick={() => window.history.back()}>
-              Volver
-            </button>
+            <p className="noStock">Producto en carrito</p>
+            <div className="buttonsContainer">
+              <Link to="/cart">
+                <button className="button">Ir al carrito</button>
+              </Link>
+              <button className="button" onClick={() => window.history.back()}>
+                Volver
+              </button>
+            </div>
           </div>
-          </div>
-        ) : product.stock === 0? <p className="noStock">Producto sin stock</p> : (
+        ) : product.stock === 0 ? (
+          <p className="noStock">Producto sin stock</p>
+        ) : (
           <ItemCount onAdd={onAdd} stock={product.stock} />
         )}
       </div>

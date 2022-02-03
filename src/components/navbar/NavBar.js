@@ -6,6 +6,7 @@ import CartWidget from "../cart/CartWidget";
 
 const NavBar = () => {
   const [categories, setCategories] = useState([]);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const filteredCategories = [];
@@ -27,22 +28,43 @@ const NavBar = () => {
       <div className="logo">
         <Link to="">Basics Store</Link>
       </div>
-      <div className="links">
+      <div className={active ? "menuActive links" : "links"}>
         {categories.map((category) => (
-          <NavLink to={`products/${category}`} key={category}>
+          <NavLink
+            to={`products/${category}`}
+            key={category}
+            onClick={() => {
+              setActive(!active);
+            }}
+          >
             {category}
           </NavLink>
         ))}
-        <NavLink to="products/offers" className="offers">
+        <NavLink
+          to="products/offers"
+          className="offers"
+          onClick={() => {
+            setActive(!active);
+          }}
+        >
           OFERTAS
         </NavLink>
       </div>
       <Link to="search" className="searchWidget">
         <i className="fas fa-search"></i>
       </Link>
+
       <Link to="cart" className="cartWidget">
         <CartWidget />
       </Link>
+      <button
+        className="button"
+        onClick={() => {
+          setActive(!active);
+        }}
+      >
+        <i className="fas fa-bars"></i>
+      </button>
     </div>
   );
 };

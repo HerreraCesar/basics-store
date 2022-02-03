@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 
+
 * {
   margin: 0rem;
   padding: 0rem;
@@ -15,11 +16,11 @@
 }
 
 @import "components/navbar/NavBar.scss";
+@import "components/navbar/Search.scss";
 @import "components/footer/Footer.scss";
-@import "components/Search.scss";
-@import "components/Message.scss";
-@import "components/Loader.scss";
-@import "components/Home.scss";
+@import "components/message/Message.scss";
+@import "components/loader/Loader.scss";
+@import "components/home/Home.scss";
 @import "components/containers/ItemListContainer.scss";
 @import "components/containers/ItemDetailContainer.scss";
 @import "components/catalogue/ItemList.scss";
@@ -30,3 +31,5 @@
 @import "components/cart/Cart.scss";
 @import "components/cart/CartWidget.scss";
 @import "components/cart/Checkout.scss";
+
+@import "responsiveness";

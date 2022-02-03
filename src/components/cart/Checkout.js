@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import db from "../../services/firebase";
 
 const Checkout = () => {
-  const { cart, purchase, clearCart, changeMessage } = useContext(CartContext);
+  const { cart, purchase, clearCart, changeMessage, clearPurchase } =
+    useContext(CartContext);
 
   let items = [];
 
@@ -19,6 +20,8 @@ const Checkout = () => {
     });
   });
 
+  const [orderNumber, setOrderNumber] = useState();
+
   const [data, setData] = useState({
     name: "",
     phone: "",
@@ -27,27 +30,36 @@ const Checkout = () => {
     items: items,
     date: new Date(),
     total: purchase.total,
-    order: "",
   });
 
   const [lastId, setLastId] = useState("");
 
-  useEffect((data) => {
+  useEffect(() => {
     const reference = collection(db, "orders");
 
     getDocs(reference).then((querySnapshot) => {
-      setData({
-        ...data,
-        order: querySnapshot.size + 1,
-      });
+      setOrderNumber(querySnapshot.size + 1);
     });
-  }, []);
+  }, [orderNumber]);
 
   const sendData = async () => {
+    setData({
+      ...data,
+      order: orderNumber,
+    });
     const db = getFirestore();
-    const { id } = await addDoc(collection(db, "orders"), data);
+    const { id } = await addDoc(collection(db, "orders"), {
+      date: data.date,
+      email: data.email,
+      name: data.name,
+      phone: data.phone,
+      order: orderNumber,
+      total: data.total,
+      items: data.items,
+    });
     setLastId(id);
     clearCart();
+    clearPurchase();
     changeMessage("Datos enviados con éxito");
   };
 
@@ -96,10 +108,10 @@ const Checkout = () => {
             className="button"
             disabled={
               data.email !== data.emailVerification ||
-              data.name === undefined ||
-              data.phone === undefined ||
-              data.email === undefined ||
-              data.emailVerification === undefined
+              data.name === "" ||
+              data.phone === "" ||
+              data.email === "" ||
+              data.emailVerification === ""
                 ? true
                 : false
             }

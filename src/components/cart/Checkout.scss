@@ -26,19 +26,15 @@
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px $focusVariant inset;
-    box-shadow: 0 0 0px 1000px $focusVariant inset;
+  -webkit-box-shadow: 0 0 0px 1000px $focusVariant inset;
+  box-shadow: 0 0 0px 1000px $focusVariant inset;
 }
 
 .purchase input:valid {
   background-color: $focusVariant;
 }
-
-/* .purchase input:invalid {
-  background-color: $focus;
-} */
 
 .purchase input::placeholder {
   font-size: 1.2rem;
@@ -46,7 +42,6 @@ input:-webkit-autofill:focus {
 }
 
 .purchase h2 {
-  /* margin-left: 1rem; */
   margin-bottom: 1rem;
 }
 
