@@ -1,6 +1,10 @@
+<head>
+    <base target="_blank">
+</head>
+
 # Basics Store
 
-E-commerce realizado durante el desarrollo del curso de [React Js](blank:#https://reactjs.org/) de [Coderhouse](blank:#https://www.coderhouse.com).
+E-commerce realizado durante el desarrollo del curso de [React Js](https://reactjs.org/) de [Coderhouse](https://www.coderhouse.com).
 
 ## Índice <a name="indice"></a>
 
@@ -10,14 +14,16 @@ E-commerce realizado durante el desarrollo del curso de [React Js](blank:#https:
 - [¿Como usar la aplicación de forma local?](#4)
 
 
-## Autor: César Herrera <a name="1"></a>
+## Autor: *César Herrera* <a name="1"></a>
 
-* [**GitHub**](blank:#https://github.com/HerreraCesar) 
-* [**LinkedIn**](blank:#https://www.linkedin.com/in/herrera-cesar/)
+* [**GitHub**](https://github.com/HerreraCesar) 
+* [**LinkedIn**](https://www.linkedin.com/in/herrera-cesar/)
 
 ## Demo <a name="2"></a>
 
-Conocé la app en funcionamiento haciendo click [aquí](blank:#https://basics-store.netlify.app/).
+Conocé la app en funcionamiento haciendo click [aquí](https://basics-store.netlify.app/).
+
+![App en funcionamiento]()
 
 ## Dependencias: <a name="3"></a>
 
@@ -29,12 +35,18 @@ Conocé la app en funcionamiento haciendo click [aquí](blank:#https://basics-st
 
 ## ¿Como usar la aplicación de forma local? <a name="4"></a>
 
-Este proyecto requiere [NodeJs](blank:#https://nodejs.org/) para su ejecución.
+Este proyecto requiere [NodeJs](https://nodejs.org/) para su ejecución.
 
-```bash
+```
 git clone https://github.com/HerreraCesar/basics-store.git
+```
+```
 cd basics-store
+```
+```
 npm install
+```
+```
 npm start
 ```
 
