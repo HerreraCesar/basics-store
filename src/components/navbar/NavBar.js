@@ -26,7 +26,9 @@ const NavBar = () => {
   return (
     <div className="NavBar">
       <div className="logo">
-        <Link to="">Basics Store</Link>
+        <Link to="" onClick={() => {
+              setActive(false);
+            }}>Basics Store</Link>
       </div>
       <div className={active ? "menuActive links" : "links"}>
         {categories.map((category) => (
@@ -50,11 +52,15 @@ const NavBar = () => {
           OFERTAS
         </NavLink>
       </div>
-      <Link to="search" className="searchWidget">
+      <Link to="search" className="searchWidget" onClick={() => {
+              setActive(false);
+            }}>
         <i className="fas fa-search"></i>
       </Link>
 
-      <Link to="cart" className="cartWidget">
+      <Link to="cart" className="cartWidget" onClick={() => {
+              setActive(false);
+            }}>
         <CartWidget />
       </Link>
       <button
