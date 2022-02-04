@@ -3,7 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer">
-      <p>Copyright © 2022 - Basics Store. <br /> Todos los derechos reservados.</p>
+      <p>
+        Copyright © 2022 - Basics Store. <br /> Todos los derechos reservados.
+      </p>
       <a
         href="https://github.com/HerreraCesar"
         target="_blank"

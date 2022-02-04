@@ -2,315 +2,281 @@
 @import "mixins";
 
 @media screen and (max-aspect-ratio: 10/8) {
+  .home div span {
+    font-size: 3rem;
+    padding: 0rem 2rem;
+    text-align: center;
+  }
 
-    .home div span {
-        font-size: 3rem;
-        padding: 0rem 2rem;
-        text-align: center;
-    }
+  .home div p {
+    font-size: 1rem;
+    padding: 0rem 1rem;
+  }
 
-    .home div p {
-        font-size: 1rem;
-        padding: 0rem 1rem;
-    }
+  .footer br {
+    display: block;
+  }
 
-    .footer br {
-        display: block;
-    }
+  .footer p {
+    line-height: 2;
+  }
 
-    .footer p {
-        line-height: 2;
-    }
+  .cart h1 {
+    margin-right: 2rem;
+  }
 
-    .cart h1 {
-        margin-right: 2rem;
-    }
+  .cart h3 {
+    margin-right: 2rem;
+  }
 
-    .cart h3 {
-        margin-right: 2rem;
-    }
-  
-    .search {
-        font-size: 3rem;
-    }
+  .search {
+    font-size: 3rem;
+  }
 
-    /* .searchBox {
-        width: 100vw;
-        overflow-x: hidden;
-    } */
+  .searchBox::before {
+    animation: none;
+    width: 100vw;
+  }
 
-    .searchBox::before {
-        /* display: none; */
-        /* width: 100vw; */
-        animation: none;
-        width: 100vw;
-    }
+  .searchBoxMin::before {
+    display: none;
+  }
 
-    .searchBoxMin::before {
-        /* display: none; */
-        /* width: 100vw; */
-        display: none;
-    }
+  .searchBoxMin {
+    margin-bottom: -2rem;
+    border-bottom: 2px solid $darkVariant;
+  }
 
-    .searchBoxMin {
-        margin-bottom: -2rem;
-        border-bottom: 2px solid $darkVariant;
-    }
+  .message {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    justify-self: center;
+  }
 
-    /* .searchBoxMin::before {
-        top: 20%;
-    } */
+  .message span {
+    font-size: 1rem;
+    margin: 0.5rem 1rem;
+  }
 
-    /* #root {
-        overflow: hidden;
-    } */
-    .message {
-        width: auto;
-        height: auto;
-        bottom: 0;
-        right: 0;
-        margin: 1rem;
-        justify-self: center;
-    }
+  .filtersBox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .message span {
-        font-size: 1rem;
-        margin: 0.5rem 1rem;
-    }
+  .filtersBox span {
+    font-size: 1rem;
+    padding: 0;
+  }
 
-    .filtersBox {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-    }
+  .filtersBox .select {
+    font-size: 1rem;
+  }
 
-    .filtersBox span {
-        font-size: 1rem;
-        padding: 0;
-    }
+  .filtersBox .select option {
+    font-size: 0.9rem;
+  }
 
-    .filtersBox .select {
-        font-size: 1rem;
-    }
+  .links {
+    background-color: $focusVariant;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: calc(100% - 4rem);
+    top: 4rem;
+    left: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+  }
 
-    .filtersBox .select option{
-        font-size: 0.9rem;
-    }
+  .menuActive {
+    left: 0%;
+  }
 
-    
- 
-    .links {
-        background-color: $focusVariant;
-        position: fixed;
-        display: flex;
-        flex-flow: column nowrap;
-        width: 100%;
-        height: calc(100% - 4rem);
-        top: 4rem;
-        left: 100%;
-        align-items: center;
-        justify-content: center;
-        z-index: 2;
-        transition: all 0.5s ease-in-out;
-    }
+  .links a {
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
 
-    .menuActive {
-        left: 0% ;
-    }
+  .links .active {
+    padding: 1.5rem 3rem;
+    background: none;
+  }
 
-    .links a {
-        padding: 1.5rem 3rem;
-        font-size: 1.6rem;
-        font-weight: 500;
-    }
+  .NavBar .button {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 2rem;
+  }
 
-    .links .active {
-        padding: 1.5rem 3rem;
-        background: none;
-    }
+  .cartWidget {
+    right: 5rem;
+  }
 
-    .NavBar .button {
-        display: block;
-        width: 2rem;
-        height: 2rem;
-        position: absolute;
-        right: 2rem;
-    }
+  .searchWidget {
+    right: 8rem;
+  }
 
-    
+  .detail {
+    flex-flow: column nowrap;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .cartWidget {
-        right: 5rem;
-    }
+  .frame {
+    width: 80vw;
+    height: 80vw;
+    margin: 6rem 0rem 2rem 0rem;
+  }
 
-    .searchWidget {
-        right: 8rem;
-    }
+  .data {
+    width: 80vw;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    height: auto;
+  }
 
-    .detail {
-        flex-flow: column nowrap;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-    }
+  .code {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
 
-    .frame {
-        width: 80vw;
-        height: 80vw;
-        margin: 6rem 0rem 2rem 0rem;
-    }
+  .detailContainer .name {
+    padding: 0.5rem 1rem;
+  }
 
-    .data {
-        width: 80vw;
-        /* max-height: 80vw; */
-        margin-bottom: 2rem;
-        margin-left: 0rem;
-        height: auto;
-    }
+  .detailContainer .price {
+    padding: 0.5rem 1rem;
+  }
 
-    .code {
-        margin-top: 0.5rem;
-        padding: 0.5rem 1rem;
-    }
+  .amount {
+    padding: 1rem;
+  }
 
-    .detailContainer .name {
-        padding: 0.5rem 1rem;
-    }
+  .noStock {
+    padding: 0rem 1rem;
+  }
 
-    .detailContainer .price {
-        padding: 0.5rem 1rem;
-    }
+  .buttonsContainer {
+    padding: 1rem;
+  }
 
-    .amount {
-        padding: 1rem;
-    }
+  .order h1 {
+    font-size: 1.2rem;
+  }
 
-    .noStock {
-        padding: 0rem 1rem;
-    }
+  .order h1:first-child {
+    padding-right: 0rem;
+  }
 
-    .buttonsContainer {
-        padding: 1rem;
-    }
+  .order button {
+    margin: 1.5rem 1.5rem;
+  }
 
-    .order h1 {
-        font-size: 1.2rem;
-    }
+  .order button:first-child {
+    margin-right: 0rem;
+  }
 
-    .order h1:first-child {
-        padding-right: 0rem;
-    }
+  .resume {
+    flex-flow: column nowrap;
+  }
 
-    .order button {
-        margin: 1.5rem 1.5rem ;
-    }
+  .resume .photo {
+    border-radius: $curve;
+  }
 
-    .order button:first-child {
-        margin-right: 0rem;
-    }
+  .resume a {
+    font-size: 1rem;
+    margin: 1rem 1rem 0rem 1rem;
+    line-height: 1.3;
+  }
 
-    .resume {
-        flex-flow: column nowrap;
-    }
+  .resume .control {
+    flex-flow: row nowrap;
+    width: 100%;
+  }
 
-    .resume .photo {
-        border-radius: $curve;
-    }
+  .control div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 1rem;
+  }
 
-    .resume a {
-        font-size: 1rem;
-        margin: 1rem 1rem 0rem 1rem;
-        line-height: 1.3;
-    }
+  .control div:first-child {
+    margin-right: 0rem;
+  }
 
-    .resume .control {
-        flex-flow: row nowrap;
-        width: 100%;
-    }
+  .resume button {
+    margin: 0rem;
+    min-width: 2.2rem;
+    height: 2.2rem;
+  }
 
-    .control div {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin: 1rem 1rem;
-    }
+  .delete {
+    margin: 0;
+    font-size: 1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .control div:first-child {
-        margin-right: 0rem;
-    }
+  .subTotal {
+    font-size: 1.3rem;
+    min-width: 5rem;
+    margin: auto;
+  }
 
-    /* .subTotal::before {
-        content: 'Subtotal';
-        font-size: 1.1rem;
-        color: $darkVariant;
-        font-weight: 500;
-        margin-left: 1rem;
-        padding-right: 0.5rem;
-    } */
+  .resume .photo {
+    width: 7rem;
+    height: 7rem;
+    margin: 1rem 0rem 0rem 1rem;
+  }
 
-    .resume button {
-        margin: 0rem;
-        min-width: 2.2rem;
-        height: 2.2rem;
-    }
+  .subQuantity {
+    font-size: 1.4rem;
+    min-width: 2.8rem;
+  }
 
-    .delete {
-        margin: 0;
-        font-size: 1rem;
-        width: 2.2rem;
-        height: 2.2rem;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .resume a p {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
 
-    .subTotal {
-        font-size: 1.3rem;
-        min-width: 5rem;
-        margin: auto;
-    }
+  .productResume {
+    width: 100%;
+  }
 
-    .resume .photo {
-        width: 7rem;
-        height: 7rem;
-        margin: 1rem 0rem 0rem 1rem;
-    }
+  .purchase form {
+    min-width: 80vw;
+    width: auto;
+  }
 
-    .subQuantity {
-        font-size: 1.4rem;
-        min-width: 2.8rem;
-    }
+  .purchase input::placeholder {
+    font-size: 1rem;
+  }
 
-    .resume a p {
-        font-size: 1.3rem;
-        font-weight: 500;
-        /* color: $focusVariant; */
-        /* margin: 0; */
-    }
+  .list {
+    grid-gap: 2rem;
+  }
 
-    .productResume {
-        width: 100%;
-    }
-
-    .purchase form {
-        min-width: 80vw;
-        width: auto;
-    }
-
-    .purchase input::placeholder {
-        font-size: 1rem;
-    }
-
-    .list {
-        grid-gap: 2rem;
-    }
-
-    .links .offers {
-        font-weight: 800;
-    }
+  .links .offers {
+    font-weight: 800;
+  }
 }
-

@@ -40,69 +40,75 @@ const Cart = () => {
               <div key={product.id} className="cartBox">
                 <div className="resume">
                   <div className="productResume">
-                  <img
-                    className="photo"
-                    src={product.photo}
-                    alt={product.name}
-                  />
-                  <Link to={`/products/details/${product.id}`}>
-                    {product.name}
-                    <p>$ {product.price}</p>
-                  </Link>
+                    <img
+                      className="photo"
+                      src={product.photo}
+                      alt={product.name}
+                    />
+                    <Link to={`/products/details/${product.id}`}>
+                      {product.name}
+                      <p>$ {product.price}</p>
+                    </Link>
                   </div>
                   <div className="control">
                     <div>
-                  {product.quantity <= 1 ? (
-                    <button
-                      newmessage="La cantidad no puede ser inferior a uno"
-                      onClick={(event) => {
-                        changeMessage(event.target.attributes.newmessage.value);
-                      }}
-                    >
-                      -
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => lessQuantity(product)}
-                      id={product.id}
-                      className="less"
-                    >
-                      -
-                    </button>
-                  )}
-                  <span className="subQuantity">{product.quantity}</span>
-                  {product.quantity >= product.stock ? (
-                    <button
-                      newmessage="No hay más productos en stock"
-                      onClick={(event) => {
-                        changeMessage(event.target.attributes.newmessage.value);
-                      }}
-                    >
-                      +
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => moreQuantity(product)}
-                      id={product.id}
-                      className="more"
-                    >
-                      +
-                    </button>
-                  )}
-                  </div>
-                  <div>
-                  <h2 className="subTotal">
-                    $ {product.price * product.quantity}
-                  </h2>
-                  <i
-                    newmessage="Producto eliminado correctamente"
-                    className="fas fa-trash-alt delete"
-                    onClick={(event) => {
-                      removeFromCart(product);
-                      changeMessage(event.target.attributes.newmessage.value);
-                    }}
-                  ></i>
-                  </div>
+                      {product.quantity <= 1 ? (
+                        <button
+                          newmessage="La cantidad no puede ser inferior a uno"
+                          onClick={(event) => {
+                            changeMessage(
+                              event.target.attributes.newmessage.value
+                            );
+                          }}
+                        >
+                          -
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => lessQuantity(product)}
+                          id={product.id}
+                          className="less"
+                        >
+                          -
+                        </button>
+                      )}
+                      <span className="subQuantity">{product.quantity}</span>
+                      {product.quantity >= product.stock ? (
+                        <button
+                          newmessage="No hay más productos en stock"
+                          onClick={(event) => {
+                            changeMessage(
+                              event.target.attributes.newmessage.value
+                            );
+                          }}
+                        >
+                          +
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => moreQuantity(product)}
+                          id={product.id}
+                          className="more"
+                        >
+                          +
+                        </button>
+                      )}
+                    </div>
+                    <div>
+                      <h2 className="subTotal">
+                        $ {product.price * product.quantity}
+                      </h2>
+                      <i
+                        newmessage="Producto eliminado correctamente"
+                        className="fas fa-trash-alt delete"
+                        onClick={(event) => {
+                          removeFromCart(product);
+                          changeMessage(
+                            event.target.attributes.newmessage.value
+                          );
+                        }}
+                      ></i>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -26,7 +26,6 @@
 
 .cart h3 span:hover {
   transition: all 0.5s;
-
   text-shadow: 1px 1px 1px $focusVariant;
 }
 
@@ -72,10 +71,6 @@
   border-radius: $curve;
   box-shadow: 1px 1px 10px $lightVariant;
 }
-
-/* .resume br {
-  display: none;
-} */
 
 .resume .photo {
   width: 8rem;

@@ -1,6 +1,6 @@
 # Basics Store
 
-E-commerce realizado durante el desarrollo del curso de <a href="https://reactjs.org/" target="_blank">React Js</a> de <a href="https://www.coderhouse.com/" target="_blank">Coderhouse</a>
+E-commerce realizado durante el desarrollo del curso de [React Js](https://reactjs.org/) de [Coderhouse](https://www.coderhouse.com/).
 
 ## Índice <a name="indice"></a>
 
@@ -11,26 +11,26 @@ E-commerce realizado durante el desarrollo del curso de <a href="https://reactjs
 
 ## Autor: *César Herrera* <a name="1"></a>
 
-* **<a href="https://github.com/HerreraCesar/" target="_blank">GitHub</a>**
-* **<a href="https://www.linkedin.com/in/herrera-cesar/" target="_blank">LinkedIn</a>**
+* **[GitHub](https://github.com/HerreraCesar/)**
+* **[LinkedIn](https://www.linkedin.com/in/herrera-cesar/)**
 
 ## Demo <a name="2"></a>
 
-Conocé la app en funcionamiento haciendo click <a href="https://basics-store.netlify.app/" target="_blank">aquí</a>.
+Conocé la app en funcionamiento haciendo click [aquí](https://basics-store.netlify.app/).
 
 ![App en funcionamiento](https://github.com/HerreraCesar/basics-store/blob/main/src/assets/gifs/demo.gif?raw=true)
 
 ## Dependencias: <a name="3"></a>
 
-- <a href="https://firebase.google.com/" target="_blank">Firebase</a> (Base de datos)
-- <a href="https://reactrouter.com/" target="_blank">React Router</a> (Navegación)
-- <a href="https://sass-lang.com/" target="_blank">SASS</a> (Estilos)
-- <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> (Iconos)
-- <a href="https://animate.style/" target="_blank">Animate.css</a> (Animaciones)
+- [Firebase](https://firebase.google.com/) (Base de datos)
+- [React Router](https://reactrouter.com/) (Navegación)
+- [SASS](https://sass-lang.com/) (Estilos)
+- [Font Awesome](https://fontawesome.com/) (Iconos)
+- [Animate.css](https://animate.style/) (Animaciones)
 
 ## ¿Como usar la aplicación de forma local? <a name="4"></a>
 
-Este proyecto requiere **<a href="https://nodejs.org/" target="_blank">Node.js</a>** para su ejecución.
+Este proyecto requiere **[Node.js](https://nodejs.org/)** para su ejecución.
 
 ```
 git clone https://github.com/HerreraCesar/basics-store.git
